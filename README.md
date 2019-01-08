@@ -12,17 +12,13 @@ this is example of client program.
 動かし方
 how to use 
 
-make
-
 cd server
-
 make
-
 ./server
-
 cd ../
-
-./fs m
-
+cd mac //or ubuntu
+mkdir m// m is (mount point)
+./comfs m
+cd client
 ./client
 
