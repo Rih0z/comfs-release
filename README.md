@@ -1,9 +1,13 @@
 # comfs-release
 
 this filesystem make you easy to make network communication program
-please see client.c or cgoogle.c
 
 fopen fclose fread fwriteなどの基本的なファイル操作の関数によって通信を確立することができるファイルシステム
+
+please see  
+fclient.c 
+this is example of client program.
+
 
 動かし方
 how to use 
