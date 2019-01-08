@@ -19,6 +19,5 @@ cd ../
 cd mac //or ubuntu
 mkdir m// m is (mount point)
 ./comfs m
-cd client
 ./client
 
