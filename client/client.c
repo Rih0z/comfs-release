@@ -14,7 +14,8 @@ int main(){
     int connect;
     printf("please set up server\n");
     scanf("%s",ctr);
-    connect = open("m/TCP4/localhost/8888/opt",O_RDWR);
+    connect = open("m/TCP4/127.0.0.1/8888/opt",O_RDWR);
+   // connect = open("m/TCP4/localhost/8888/opt",O_RDWR);
     if(connect == -1){
         printf("connect faild\n");
         printf("Plese Setup Server \n");
