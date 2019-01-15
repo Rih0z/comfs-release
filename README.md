@@ -12,17 +12,22 @@ this is example of client program.
 動かし方
 how to use 
 
-make
+plese install fuse 
+
+mac
+brew install osxfuse
+https://osxfuse.github.io/
+
+ubuntu
+sudo apt-get install libfuse-dev
+https://gist.github.com/cstroe/e83681e3510b43e3f618
 
 cd server
-
 make
-
 ./server
-
 cd ../
-
-./fs m
-
+cd mac //or ubuntu
+mkdir m// m is (mount point)
+./comfs m
 ./client
 
