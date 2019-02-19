@@ -19,8 +19,6 @@ int main(){
     }else{
         printf("connect SUCCESS!\n");
     }
-    //存在しないファイルにはアクセスできない
-    //NULLになるのは仕方ない？
     int endflag = 1;
     int count = 0;
     while(endflag){
@@ -38,16 +36,12 @@ int main(){
             if(senddata[0] == 'E')
                 endflag = 0 ;
         }
-        //int ret = fwrite(senddata,sizeof(senddata),1,connect);
         int ret = write(connect,senddata,sizeof(senddata));
         if(ret == 0 ){
             printf("No write \n");
         }if(ret < 0 ){
             printf("error");
         }else{
-            //厳密にいうとしっかり書き込まれたかこれではみれない
-            //ブロックサイズまでは書けることが多いが普通のOSの場合512?当たるなでが「
-            //書き込みのサイズを見る
             printf("sizeof %lu data is %s sended\n",sizeof(senddata) ,senddata);
         }
 
@@ -55,7 +49,6 @@ int main(){
         printf("if you input any words , reciev a reply\n");
         printf("read start\n");
         char message[256];
-        //  ret = fread(message,256,1,connect);
         ret = read(connect ,message,sizeof(message));
         if(ret < 0 ){
             printf("read faild\n");
